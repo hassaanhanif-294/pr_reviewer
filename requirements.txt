@@ -1,0 +1,21 @@
+# Core dependencies for PR Analyzer
+requests>=2.31.0          # For GitHub API calls
+python-dotenv>=1.0.0      # For environment variables
+mcp[cli]>=1.4.0           # For MCP server functionality
+notion-client>=2.3.0      # For Notion integration
+slack_sdk>=3.30.0         # Optional, for Slack integration
+
+# LangChain + Groq + MCP integration
+langchain>=0.1.16
+langchain-groq>=0.0.6
+langchain-mcp-adapters>=0.0.3
+langgraph>=0.0.18
+
+# FastAPI for the web server
+fastapi>=0.95.0           # For FastAPI web server
+
+# Uvicorn for running FastAPI app
+uvicorn>=0.20.0           # For serving FastAPI app
+
+# Optional: for agent building (if it's in a separate module like 'agent_builder')
+# No separate package required if it's a part of your codebase.
