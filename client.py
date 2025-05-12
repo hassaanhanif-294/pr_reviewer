@@ -7,9 +7,11 @@ from langchain_mcp_adapters.tools import load_mcp_tools
 from langgraph.prebuilt import create_react_agent
 from langchain_core.messages import HumanMessage
 from dotenv import load_dotenv
+from pathlib import Path
 load_dotenv()
 
-MCP_SCRIPT_PATH = "C:\\Users\\hassaanhanif\\Desktop\\pr_reviewer\\pr_analyzer.py"
+BASE_DIR = Path(__file__).resolve().parent
+MCP_SCRIPT_PATH = str(BASE_DIR / "pr_analyzer.py")
 
 server_params = StdioServerParameters(
     command="python",
